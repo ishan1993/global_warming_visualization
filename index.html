@@ -4,12 +4,10 @@
 
 <div id="my_dataviz"></div>
 
-<button onClick="window.location.reload();">Reset</button>
+<button onClick="next_page('monthly_csv.csv');">Reset</button>
 <button onClick="next_page('sea_level.csv');">Next</button>
-<script>
-    
-next_page("monthly_csv.csv");
 
+<script>
 function next_page(file_name)
 {
     d3.select("#my_dataviz").html = "";
