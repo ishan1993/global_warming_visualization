@@ -110,6 +110,9 @@ d3.csv(file_name,
   if (file_name == "sea_level.csv") {
      var y_tag = "Sea Level Mean";
   }
+    if (file_name == "CO2.csv") {
+     var y_tag = "CO2 Levels";
+  }
     svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 0 - margin.left)
