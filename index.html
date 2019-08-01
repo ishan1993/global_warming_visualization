@@ -207,22 +207,20 @@ d3.csv(file_name,
         var bText = document.createTextNode('Home');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
-        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+        button.setAttribute('onclick', "combined();");
   
-       if (file_name == "monthly_csv.csv") {
-        var button = document.createElement('button');          // CREATE THE BUTTON.
-        var bText = document.createTextNode('Next');          // CREATE TEXT FOR THE BUTTON
+	var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Explore Sea Level History Data');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('sea_level.csv');");
-      }
-      if (file_name == "sea_level.csv") {
+      
         var button = document.createElement('button');          // CREATE THE BUTTON.
-        var bText = document.createTextNode('Back');          // CREATE TEXT FOR THE BUTTON
+        var bText = document.createTextNode('Explore Temperature History Data');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
-      }
+      
 }
 	
 function combined () {
@@ -230,6 +228,18 @@ function combined () {
 	document.body.innerHTML = '<svg width="960" height="500"></svg> <table><tr><td>Sea Level</td><td style="width:300px"><hr width="10%" height="10px" color="navy" align="left"></td></tr><tr><td>CO2 Level</td><td style="width:300px"><hr width="10%" height="10px" color="maroon" align="left"></td></tr></table>';
 	combined_plot("data.json","navy");
 	combined_plot("data1.json","maroon");
+	
+	var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Explore Sea Level History Data');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('sea_level.csv');");
+      
+        var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Explore Temperature History Data');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
 }
   function combined_plot(filename,color) {
     // set the dimensions and margins of the graph
