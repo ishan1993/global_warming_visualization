@@ -230,7 +230,9 @@ d3.csv(file_name,
 function combined () {
 	
 	document.body.innerHTML = '<svg width="960" height="500"></svg>';
-  
+	combined_plot("data.json");
+}
+  function combined_plot(filename) {
     // set the dimensions and margins of the graph
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -250,7 +252,7 @@ var line = d3.line()
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("data.json", function(error, data) {
+d3.json(filename, function(error, data) {
     if (error) throw error;
 
     data.forEach(function(d) {
