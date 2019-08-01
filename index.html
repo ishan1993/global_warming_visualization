@@ -220,6 +220,12 @@ d3.csv(file_name,
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+	
+	var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Explore CO2 Level History Data');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
       
 }
 	
@@ -237,6 +243,12 @@ function combined () {
       
         var button = document.createElement('button');          // CREATE THE BUTTON.
         var bText = document.createTextNode('Explore Temperature History Data');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+	
+	var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Explore CO2 Level History Data');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
