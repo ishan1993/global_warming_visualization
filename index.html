@@ -141,16 +141,22 @@ d3.csv(file_name,
     });
 
 })
+        var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('Reset');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+  
        if (file_name == "monthly_csv.csv") {
         var button = document.createElement('button');          // CREATE THE BUTTON.
-        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
+        var bText = document.createTextNode('Next');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('sea_level.csv');");
       }
       if (file_name == "sea_level.csv") {
         var button = document.createElement('button');          // CREATE THE BUTTON.
-        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
+        var bText = document.createTextNode('Back');          // CREATE TEXT FOR THE BUTTON
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
