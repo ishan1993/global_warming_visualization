@@ -230,10 +230,10 @@ d3.csv(file_name,
 function combined () {
 	
 	document.body.innerHTML = '<svg width="960" height="500"></svg>';
-	combined_plot("data.json");
-	combined_plot("data1.json");
+	combined_plot("data.json","blue");
+	combined_plot("data1.json","red");
 }
-  function combined_plot(filename) {
+  function combined_plot(filename,color) {
     // set the dimensions and margins of the graph
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -284,7 +284,8 @@ d3.json(filename, function(error, data) {
     g.append("path")
         .datum(data)
         .attr("class", "line")
-        .attr("d", line);
+        .attr("d", line)
+	.attr("stroke", color);
 
     var focus = g.append("g")
         .attr("class", "focus")
