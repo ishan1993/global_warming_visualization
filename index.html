@@ -12,8 +12,7 @@ next_page("monthly_csv.csv");
 
 function next_page(file_name)
 {
-    window.location.reload();
-    d3.select("body").html = "";
+    d3.select("#my_dataviz").html = "";
     // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 800 - margin.left - margin.right,
