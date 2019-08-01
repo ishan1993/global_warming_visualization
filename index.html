@@ -128,7 +128,7 @@ d3.csv("monthly_csv.csv",
         .transition()
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y(d.value) })
+          .y(function(d) { return y(d.value1) })
       )
     });
 
