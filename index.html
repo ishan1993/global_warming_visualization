@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.js"></script>
-
+<style>
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: salmon;
+  border: none;
+}
+button:hover {
+  background: lightsalmon;
+}
+</style>
 <body onload="next_page('monthly_csv.csv');">
-<svg id="my_dataviz"></svg>
-<button onClick="next_page('sea_level.csv');">sea</button>
 </body>
 
 <script>
 function next_page(file_name)
 {
+    if (file_name == "monthly_csv.csv") {
+        var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        button.setAttribute('onclick', 'next_page('sea_level.csv')');
+     }
     document.body.innerHTML = '';
     // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
