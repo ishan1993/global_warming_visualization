@@ -8,7 +8,7 @@ button {
   font-weight: bold;
   padding: 0 40px;
   background: salmon;
-  border: 5px solid white;
+  border: 10px solid white;
 }
 button:hover {
   background: lightsalmon;
@@ -24,8 +24,8 @@ function next_page(file_name)
   
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
-        width = 800 - margin.left - margin.right,
-        height = 800 - margin.top - margin.bottom;
+        width = 700 - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select("body")
