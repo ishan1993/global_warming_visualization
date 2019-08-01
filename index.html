@@ -155,24 +155,7 @@ d3.csv(file_name,
       .append("g")
         .attr("class", "brush")
         .call(brush);
-	
-	    // Add the line
-    line.append("path")
-      .datum(data)
-      .attr("class", "line")  // I add the class line to be able to modify this line later on.
-      .attr("fill", "none")
-      .attr("stroke", "steelblue")
-      .attr("stroke-width", 1.5)
-      .attr("d", d3.line()
-        .x(function(d) { return x(d.date) })
-        .y(function(d) { return y(d.value) + 5 })
-        )
 
-    // Add the brushing
-    line
-      .append("g")
-        .attr("class", "brush")
-        .call(brush);
     // A function that set idleTimeOut to null
     var idleTimeout
     function idled() { idleTimeout = null; }
@@ -209,7 +192,7 @@ d3.csv(file_name,
       x.domain(d3.extent(data, function(d) { return d.date; }))
       xAxis.transition().call(d3.axisBottom(x))
       line
-        .selectAll('.line')
+        .select('.line')
         .transition()
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
@@ -241,5 +224,10 @@ d3.csv(file_name,
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
       }
+}
+	
+function combined () {
+	
+	
 }
 </script>
