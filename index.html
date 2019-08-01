@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.js"></script>
 
+<body onload="next_page('monthly_csv.csv');">
 <svg id="my_dataviz"></svg>
-
-<button onClick="next_page('monthly_csv.csv');">month</button>
-<button onClick="next_page('sea_level.csv');">Next</button>
+<button onClick="next_page('sea_level.csv');">sea</button>
+</body>
 
 <script>
 function next_page(file_name)
