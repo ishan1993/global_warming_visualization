@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.js"></script>
 
-<div id="my_dataviz"></div>
+<svg id="my_dataviz"></svg>
 
 <button onClick="next_page('monthly_csv.csv');">Reset</button>
 <button onClick="next_page('sea_level.csv');">Next</button>
@@ -18,7 +18,6 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
-  .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
