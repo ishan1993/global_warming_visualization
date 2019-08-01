@@ -141,7 +141,10 @@ d3.csv(file_name,
     });
 
 })
-        document.body.write('<br><br>');
+        var x = document.createElement("P");                        // Create a <p> element
+        var t = document.createTextNode("<br><br>hello");    // Create a text node
+        x.appendChild(t);                                           // Append the text to <p>
+        document.body.appendChild(x);   
   
         var button = document.createElement('button');          // CREATE THE BUTTON.
         var bText = document.createTextNode('Reset');          // CREATE TEXT FOR THE BUTTON
