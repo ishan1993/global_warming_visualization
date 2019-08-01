@@ -9,7 +9,7 @@
 <div id="my_dataviz"></div>
 
 <button onClick="window.location.reload();">Reset</button>
-<button onClick="next_page('monthly_csv.csv');">Next</button>
+<!-- <button onClick="next_page('monthly_csv.csv');">Next</button> -->
 <script>
 
 // set the dimensions and margins of the graph
@@ -25,6 +25,9 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+
+next_page("monthly_csv.csv");
+
 function next_page(file_name)
 {
 //Read the data
