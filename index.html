@@ -284,7 +284,9 @@ d3.json(filename, function(error, data) {
     g.append("path")
         .datum(data)
         .attr("class", "line")
-        .attr("d", line)
+        .attr("d", line);
+	
+	svg.select("line")
 	.attr("stroke", color);
 
     var focus = g.append("g")
