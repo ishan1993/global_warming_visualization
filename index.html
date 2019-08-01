@@ -68,6 +68,7 @@ function next_page(file_name)
     // append the svg object to the body of the page
     var svg = d3.select("body")
         .append("svg")
+    	.html("<title>Hello</title>")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -234,7 +235,7 @@ d3.csv(file_name,
 	
 function combined () {
 	
-	document.body.innerHTML = '<svg width="960" height="500"><title>hello</title></svg> <table><tr><td>Sea Level</td><td style="width:300px"><hr width="10%" height="10px" color="navy" align="left"></td></tr><tr><td>Temperature</td><td style="width:300px"><hr width="10%" height="10px" color="red" align="left"></td></tr><tr><td>CO2 Level</td><td style="width:300px"><hr width="10%" height="10px" color="maroon" align="left"></td></tr></table>';
+	document.body.innerHTML = '<svg width="960" height="500"></svg> <table><tr><td>Sea Level</td><td style="width:300px"><hr width="10%" height="10px" color="navy" align="left"></td></tr><tr><td>Temperature</td><td style="width:300px"><hr width="10%" height="10px" color="red" align="left"></td></tr><tr><td>CO2 Level</td><td style="width:300px"><hr width="10%" height="10px" color="maroon" align="left"></td></tr></table>';
 	combined_plot("data.json","navy");
 	combined_plot("data2.json","red");
 	combined_plot("data1.json","maroon");
