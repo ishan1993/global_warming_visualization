@@ -228,7 +228,7 @@ d3.csv(file_name,
 	
 function combined () {
 	
-	document.body.innerHTML = '<svg width="960" height="500"></svg> <table><tr><td style="width:500px">Sea Level</td><td style="width:500px"><hr width="5%" height="12px" color="navy" align="left"></td></tr><tr><td style="width:500px">CO2 Level</td><td style="width:500px"><hr width="5%" height="12px" color="maroon"></td></tr></table>';
+	document.body.innerHTML = '<svg width="960" height="500"></svg> <table><tr><td>Sea Level</td><td style="width:300px"><hr width="5%" height="12px" color="navy" align="left"></td></tr><tr><td>CO2 Level</td><td style="width:300px"><hr width="5%" height="12px" color="maroon"></td></tr></table>';
 	combined_plot("data.json","navy");
 	combined_plot("data1.json","maroon");
 }
