@@ -156,7 +156,7 @@ d3.csv(file_name,
         .attr("class", "brush")
         .call(brush);
 	
-    var focus = g.append("g")
+    var focus = svg.append("g")
         .attr("class", "focus")
         .style("display", "none");
     focus.append("line")
