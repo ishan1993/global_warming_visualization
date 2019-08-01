@@ -58,7 +58,7 @@ d3.csv(file_name,
                            (height + margin.top + 25) + ")")
       .style("text-anchor", "middle")
       .attr("font-size", "20px")
-      .text("Date");
+      .text("Time");
 
     // Add Y axis
     var y = d3.scaleLinear()
@@ -66,7 +66,15 @@ d3.csv(file_name,
       .range([ height, 0 ]);
     yAxis = svg.append("g")
       .call(d3.axisLeft(y));
-
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .attr("font-size", "20px")
+      .style("text-anchor", "middle")
+      .text("Temperature Mean"); 
+ 
     // Add a clipPath: everything out of this area won't be drawn.
     var clip = svg.append("defs").append("svg:clipPath")
         .attr("id", "clip")
