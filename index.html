@@ -170,6 +170,7 @@ d3.csv(file_name,
         button.appendChild(bText);
         document.body.appendChild(button);
         button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+        button.setAttribute('title', "Back to first page.");
   
        if (file_name == "monthly_csv.csv") {
         var button = document.createElement('button');          // CREATE THE BUTTON.
