@@ -11,8 +11,13 @@
 <button onClick="window.location.reload();">Reset</button>
 <button onClick="next_page('sea_level.csv');">Next</button>
 <script>
+    
+next_page("monthly_csv.csv");
 
-// set the dimensions and margins of the graph
+function next_page(file_name)
+{
+    d3.select("#my_dataviz").html = "";
+    // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 800 - margin.left - margin.right,
     height = 800 - margin.top - margin.bottom;
@@ -25,11 +30,6 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-
-next_page("monthly_csv.csv");
-
-function next_page(file_name)
-{
 //Read the data
 d3.csv(file_name,
 
