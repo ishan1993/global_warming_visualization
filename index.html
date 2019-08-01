@@ -21,13 +21,6 @@ button:hover {
 function next_page(file_name)
 {
       document.body.innerHTML = '';
-//     if (file_name == "monthly_csv.csv") {
-        var button = document.createElement('button');          // CREATE THE BUTTON.
-        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
-        button.appendChild(bText);
-        document.body.appendChild(button);
-        button.setAttribute('onclick', "next_page('sea_level.csv');");
-//      }
   
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -148,5 +141,19 @@ d3.csv(file_name,
     });
 
 })
+       if (file_name == "monthly_csv.csv") {
+        var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('sea_level.csv');");
+      }
+      if (file_name == "sea_level.csv") {
+        var button = document.createElement('button');          // CREATE THE BUTTON.
+        var bText = document.createTextNode('sea');          // CREATE TEXT FOR THE BUTTON
+        button.appendChild(bText);
+        document.body.appendChild(button);
+        button.setAttribute('onclick', "next_page('monthly_csv.csv');");
+      }
 }
 </script>
