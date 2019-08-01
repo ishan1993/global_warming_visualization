@@ -66,6 +66,12 @@ d3.csv(file_name,
       .range([ height, 0 ]);
     yAxis = svg.append("g")
       .call(d3.axisLeft(y));
+  if (file_name == "monthly_csv.csv") {
+    var y_tag = "Temperature Mean";
+  }
+  if (file_name == "sea_level.csv") {
+     var y_tag = "Sea Level Mean";
+  }
     svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 0 - margin.left)
@@ -73,7 +79,7 @@ d3.csv(file_name,
       .attr("dy", "1em")
       .attr("font-size", "20px")
       .style("text-anchor", "middle")
-      .text("Temperature Mean"); 
+      .text(y_tag); 
  
     // Add a clipPath: everything out of this area won't be drawn.
     var clip = svg.append("defs").append("svg:clipPath")
